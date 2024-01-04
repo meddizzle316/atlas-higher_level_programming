@@ -6,8 +6,8 @@ def main(argv):
     if len(argv) == 0:
         print(".")
         sys.exit()
-    print ("{} arguments".format(len(argv) - 1))
-    for i in (len(argv) - 1):
+    print ("{} arguments".format(len(argv)))
+    for i in (len(argv)):
         print("{}: {}".format(i, argv[i]))
 
 
