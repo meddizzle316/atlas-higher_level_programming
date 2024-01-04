@@ -5,4 +5,3 @@ for i in range(10):
             print("{}{}".format(i, x), end=", ")
         elif not i == x and x > i and i == 8:
             print("{}{}".format(i, x))
-        
