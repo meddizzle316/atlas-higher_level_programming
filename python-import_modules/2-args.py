@@ -3,7 +3,7 @@ import sys
 
 
 def main(argv):
-    if len(argv) == 1:
+    if len(argv) == 0:
         print(".")
         sys.exit()
     print ("{} arguments".format(len(argv) - 1))
@@ -12,4 +12,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
