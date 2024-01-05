@@ -2,7 +2,7 @@
 import hidden_4
 
 
-def main(args):
+def main():
     list = dir(hidden_4)
     for i in list:
         if not i[0] == "_":
