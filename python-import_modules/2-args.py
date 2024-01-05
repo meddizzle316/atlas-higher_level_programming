@@ -4,12 +4,12 @@ import sys
 
 def main(args):
     if len(args) == 0:
-        print ("{} arguments.".format(len(args)))
+        print("{} arguments.".format(len(args)))
         sys.exit()
     elif len(args) == 1:
-        print ("{} argument:".format(len(args)))
+        print("{} argument:".format(len(args)))
     else:
-        print ("{} arguments:".format(len(args)))
+        print("{} arguments:".format(len(args)))
     for i in range(0, len(args)):
         print("{}: {}".format(i + 1, args[i]))
 
