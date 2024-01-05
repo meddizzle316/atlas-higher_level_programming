@@ -8,7 +8,6 @@ def main(args):
         print("0")
         sys.exit()
     for i in range(len(args)):
-        print(args[i], i)
         result += int(args[i])
     print (result)
 
