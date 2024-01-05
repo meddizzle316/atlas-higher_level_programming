@@ -9,7 +9,7 @@ def main(args):
         sys.exit()
     for i in range(len(args)):
         result += int(args[i])
-    print (result)
+    print(result)
 
 
 if __name__ == "__main__":
