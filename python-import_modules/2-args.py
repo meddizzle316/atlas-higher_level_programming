@@ -2,13 +2,13 @@
 import sys
 
 
-def main(argv):
-    if len(argv) == 0:
+def main(args):
+    if len(args) == 0:
         print(".")
         sys.exit()
-    print ("{} arguments".format(len(argv)))
-    for i in (len(argv)):
-        print("{}: {}".format(i, argv[i]))
+    print ("{} arguments".format(len(args)))
+    for i in range(len(args)):
+        print("{}: {}".format(i, args[i]))
 
 
 if __name__ == "__main__":
