@@ -10,7 +10,7 @@ def main(args):
         print ("{} argument:".format(len(args)))
     else:
         print ("{} arguments:".format(len(args)))
-    for i in range(1, len(args) + 1):
+    for i in range(1, len(args)):
         print("{}: {}".format(i, args[i]))
 
 
