@@ -10,7 +10,7 @@ def main(args):
     for i in range(len(args)):
         print(args[i], i)
         result += int(args[i])
-    return result
+    print (result)
 
 
 if __name__ == "__main__":
