@@ -8,8 +8,10 @@ def main(args):
         print("0")
         sys.exit()
     for i in range(len(args)):
+        print(args[i], i)
         result += int(args[i])
     return result
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
