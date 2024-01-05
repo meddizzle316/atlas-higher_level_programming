@@ -10,8 +10,8 @@ def main(args):
         print ("{} argument:".format(len(args)))
     else:
         print ("{} arguments:".format(len(args)))
-    for i in range(1, len(args)):
-        print("{}: {}".format(i, args[i]))
+    for i in range(0, len(args)):
+        print("{}: {}".format(i + 1, args[i]))
 
 
 if __name__ == "__main__":
