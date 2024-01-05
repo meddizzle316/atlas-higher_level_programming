@@ -3,10 +3,10 @@ import sys
 
 
 def main(args):
-    print ("{} arguments".format(len(args)))
     if len(args) == 0:
-        print(".")
+        print ("{} arguments.".format(len(args)))
         sys.exit()
+    print ("{} arguments".format(len(args)))
     for i in range(1, len(args)):
         print("{}: {}".format(i, args[i]))
 
