@@ -8,13 +8,13 @@ def add_tuple(tuple_a=(), tuple_b=()):
         tuple_b += stored_tuple
     for i in range(2):
         if tuple_a[i] is None:
-            pass 
-        else: 
+            pass
+        else:
             a = tuple_a[i]
         if tuple_b[i] is None:
             pass
         else:
             b = tuple_b[i]
         total = a + b
-        new_list.append((total)) 
+        new_list.append((total))
     return tuple(new_list)
