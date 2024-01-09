@@ -9,4 +9,7 @@ def best_score(a_dictionary):
             max = values_list[i]
     if max == -922337203685477:
         return None
-    return max
+    for key, value in a_dictionary.items():
+        if value == max:
+            return key
+    return None
