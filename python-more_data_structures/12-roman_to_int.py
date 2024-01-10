@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
                 result -= dict[s]
             elif s in dict:
                 result += dict[s]
-        except IndexError:
+        except Exception:
             s = roman_string[i]
             if s in dict:
                 result += dict[s]
