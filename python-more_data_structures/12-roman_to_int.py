@@ -6,14 +6,15 @@ def roman_to_int(roman_string):
     if roman_string is None or not isinstance(roman_string, str):
         return None
     for i in range(len(roman_string)):
-        s = roman_string[i]
         try:
+            s = roman_string[i]
             n = roman_string[i + 1]
             if s in dict and n in dict and dict[s] < dict[n]:
                 result -= dict[s]
             elif s in dict:
                 result += dict[s]
         except IndexError:
+            s = roman_string[i]
             if s in dict:
                 result += dict[s]
     return result
