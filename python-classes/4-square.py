@@ -24,11 +24,11 @@ class Square:
 
     def area(self):
         return self._Square__size*self._Square__size
-    
+
     @property
     def size(self):
         return self._Square__size
-    
+
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
