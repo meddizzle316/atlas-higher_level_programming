@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """This is a basic training module designed to teach us how to use classes
 
 """
@@ -53,13 +52,12 @@ class Square:
     @position.setter
     def position(self, value):
         if not value == (0, 0):
-            try:
-                x = len(value)
-                is_0_pos_int = isinstance(value[0], int) and value[0] >= 0
-                is_1_pos_int = isinstance(value[1], int) and value[1] >= 0
-                if isinstance(value, tuple) and x == 2 and is_0_pos_int == True and is_1_pos_int == True:
-                    self._Square__position = value
-            except TypeError:
+            x = len(value)
+            is_0_pos_int = isinstance(value[0], int) and value[0] >= 0
+            is_1_pos_int = isinstance(value[1], int) and value[1] >= 0
+            if isinstance(value, tuple) and x == 2 and is_0_pos_int == True and is_1_pos_int == True:
+                self._Square__position = value
+            else:
                 raise TypeError("position must be a tuple of 2 positive integers")
         elif value == (0, 0):
             self._Square__position = (0, 0)
