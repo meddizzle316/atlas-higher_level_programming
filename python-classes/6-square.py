@@ -15,10 +15,10 @@ class Square:
     Args:
        size (int): The first parameter
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
-            
+   
     def area(self):
         return self._Square__size*self._Square__size
 
@@ -53,9 +53,9 @@ class Square:
     def position(self, value):
         if not value == (0, 0):
             x = len(value)
-            is_0_pos_int = isinstance(value[0], int) and value[0] >= 0
-            is_1_pos_int = isinstance(value[1], int) and value[1] >= 0
-            if isinstance(value, tuple) and x == 2 and is_0_pos_int == True and is_1_pos_int == True:
+            is_0_pos_i = isinstance(value[0], int) and value[0] >= 0
+            is_1_pos_i = isinstance(value[1], int) and value[1] >= 0
+            if isinstance(value, tuple) is True and x == 2 and is_0_pos_i is True and is_1_pos_i is True:
                 self._Square__position = value
             else:
                 raise TypeError("position must be a tuple of 2 positive integers")
