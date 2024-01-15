@@ -10,7 +10,7 @@
 >>> add_integer('2', '3')
 Trackback (most recent call last):
 ...
-TypeError: unsupported operand type(s) for +: 'str' and 'str'
+TypeError: a must be an integer
 
 
 """
