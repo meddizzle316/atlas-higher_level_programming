@@ -5,6 +5,7 @@ part of a module to help us learn doctesting
 def matrix_divided(matrix, div):
     """ Function that divides all elements of a matrix """
 
+    string = "matrix must be a matrix (list of lists) of integers/floats"
     # rows are same length check
     for row in matrix:
         if not len(row) == len(matrix[0]):
@@ -14,8 +15,7 @@ def matrix_divided(matrix, div):
     for i in range(len(matrix)):
         for x in range(len(matrix[0])):
             if not isinstance(matrix[i][x], (int, float)):
-                raise TypeError('matrix must be a matrix' 
-                    '(list of lists) of integers/floats')
+                raise TypeError(string)
 
     # checks if div is a int or float
     if not isinstance(div, (int, float)):
