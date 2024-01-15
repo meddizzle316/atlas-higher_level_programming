@@ -1,9 +1,6 @@
-import unittest
-import add_integer from 0-add_integer
+""" This is a doctest module with tests for 0-add_integer
 
 
-class TestAddInteger(unittest.TestCase):
-    
-    def test_add(self):
-        result = add_integer(20, 98)
-        self.assertEqual(result, 118)
+>>> add_integer(4, 98)
+102
+"""
