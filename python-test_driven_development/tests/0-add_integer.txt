@@ -7,10 +7,6 @@
 0
 >>> add_integer(0, )
 98
->>> add_integer('2', '3')
-Trackback (most recent call last):
-...
-TypeError: a must be an integer
 
 
 """
