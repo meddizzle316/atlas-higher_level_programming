@@ -2,6 +2,8 @@
 """
 part of a module to help us learn doctesting
 """
+
+
 def matrix_divided(matrix, div):
     """ Function that divides all elements of a matrix """
 
@@ -19,8 +21,8 @@ def matrix_divided(matrix, div):
 
     # checks if div is a int or float
     if not isinstance(div, (int, float)):
-        raise TypeError('div must be a number') 
-  
+        raise TypeError('div must be a number')
+
     # checks if div is zero
     if div == 0:
         raise ZeroDivisionError('division by zero')
