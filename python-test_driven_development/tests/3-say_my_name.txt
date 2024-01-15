@@ -1,0 +1,5 @@
+""" This is a doctest module with tests for 2-matrix_divided
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name("John", "Smith")
+My name is John Smith
