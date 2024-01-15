@@ -25,5 +25,5 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError('division by zero')
     
     # dividing operation
-    new_matrix = [[round(j / div, 2) for j in range(len(matrix[i]))] for y in range(len(matrix))]
+    new_matrix = [[round(j / div, 2) for j in row] for row in matrix]
     return new_matrix
