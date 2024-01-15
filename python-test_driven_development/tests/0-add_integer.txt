@@ -19,5 +19,5 @@
 >>> add_integer('nan')
 Traceback (most recent call last):
 ...
-ValueError: Cannot convert float NaN to integer
+TypeError: a must be an integer
 """
