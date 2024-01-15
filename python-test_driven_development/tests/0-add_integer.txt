@@ -3,10 +3,7 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(4, 98)
 102
->>> add_integer('asdf', 98)
-2
->>> add_integer()
+>>> add_integer(0, 0)
 98
->>> add_integer( , 98)
 
 """
