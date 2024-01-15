@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-This is a basic module in which we print a square and in which that function is tested
+This is a basic module in which we print a square 
 """
+
 
 def print_square(size):
     """ A function that prints a square """
