@@ -18,7 +18,7 @@ TypeError: div must be a number
 >>> matrix_divided(matrix, )
 Traceback (most recent call last):
 ...
-TypeError: div must be a number
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 >>> matrix = [[1, 2, 3], [4, 5]]
 >>> matrix_divided(matrix, 3)
