@@ -1,12 +1,20 @@
 """ This is a doctest module with tests for 0-add_integer
 
 >>> add_integer = __import__('0-add_integer').add_integer
+'positive valid test'
 >>> add_integer(4, 98)
 102
->>> add_integer(0, 0)
-0
->>> add_integer(0, )
-98
 
+'one negative test'
+>>> add_integer(-1, 0)
+-1
+
+'one value'
+>>> add_integer(5)
+103
+
+'one float and one negative test'
+>>> add_integer(5.3, -5)
+0
 
 """
