@@ -26,4 +26,9 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
+>>> add_integer('nan')
+Traceback (most recent call last):
+...
+ValueError: Cannot convert float NaN to integer
+
 """
