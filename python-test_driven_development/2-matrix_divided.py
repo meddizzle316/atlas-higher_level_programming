@@ -7,7 +7,6 @@ part of a module to help us learn doctesting
 def matrix_divided(matrix, div):
     """ Function that divides all elements of a matrix """
 
-    string = "matrix must be a matrix (list of lists) of integers/floats"
     # rows are same length check
     for row in matrix:
         if not len(row) == len(matrix[0]):
