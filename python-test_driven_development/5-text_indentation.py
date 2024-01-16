@@ -9,9 +9,12 @@ def text_indentation(text):
     """ prints newlines after specified characters """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
-    for i in text:
-        if i == "." or i == ":" or i == "?":
-            print(i)
+    i = 0
+    while i < len(text):
+        if text[i] == "." or text[i] == ":" or text[i] == "?":
+            print(text[i])
             print()
+            i += 1
         else:
-            print(i, end="")
+            print(text[i], end="")
+        i += 1  
