@@ -26,3 +26,9 @@ class TestMaxInt(unittest.TestCase):
         list = [10, 5, 2, -4]
         result = max_integer(list)
         self.assertEqual(result, 10)
+    def test_one_element(self):
+        list = [7]
+        self.assertEqual(max_integer(list), 7)
+    def test_empty_list(self):
+        list = []
+        self.assertEqual(max_integer(list), None)
