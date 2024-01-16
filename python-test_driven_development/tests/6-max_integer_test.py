@@ -20,7 +20,7 @@ def max_integer(list=[]):
 
 class TestMaxInt(unittest.TestCase):
     
-    def test_positive(self):
+    def test_max_at_end(self):
         list = [1, 2, 3, 4]
         result = max_integer(list)
         self.assertEqual(result, 4)
@@ -36,3 +36,7 @@ class TestMaxInt(unittest.TestCase):
         list = [-1, 5, 2, -4]
         result = max_integer(list)
         self.assertEqual(result, 5)
+    def test_max_at_beginning(self):
+        list = [10, 5, 2, -4]
+        result = max_integer(list)
+        self.assertEqual(result, 10)
