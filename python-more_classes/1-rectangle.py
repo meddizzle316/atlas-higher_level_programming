@@ -6,7 +6,7 @@ A module focused on learned more about python classes
 
 class Rectangle:
     """A class for a rectangle like object"""
-    def __init__(self, width=0, height=0): 
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
