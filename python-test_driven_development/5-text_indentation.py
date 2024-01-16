@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-A module that prints a text with 2 new lines 
+A module that prints a text with 2 new lines
 after specific characters
 """
+
+
 def text_indentation(text):
     """ prints newlines after specified characters """
     if not isinstance(text, str):
