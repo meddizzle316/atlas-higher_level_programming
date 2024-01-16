@@ -45,7 +45,7 @@ class Rectangle:
     def __str__(self):
         new_list = []
         if self.width == 0 or self.height == 0:
-            return '\n'
+            return ""
         else:
             for i in range(self._height):
                 for x in range(self._width):
