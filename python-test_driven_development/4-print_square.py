@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is a basic module in which we print a square 
+This is a basic module in which we print a square
 """
 
 
