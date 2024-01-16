@@ -12,3 +12,13 @@ Non autem hoc:
 <BLANKLINE>
 igitur ne illud quidem.
 <BLANKLINE>
+
+>>> test_indentation()
+Traceback (most recent call last):
+...
+TypeError: test_indentation() missing 1 required positional argument: 'text'
+
+>>> test_indentation('10')
+Traceback (most recent call last):
+...
+TypeError: text must be a string
