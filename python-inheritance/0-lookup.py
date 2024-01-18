@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for learning inheritance
+Module learning inheritance
 has a lookup function
 """
 
