@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-"""
-A module to learn inheritance
-it's going to focus on simple 
-examples first
-"""
+" A module to learn inheritanc"
 
 
 class MyList(list):
-
+    " a custom class for a list"
     def print_sorted(self):
+        " prints a sorted list, no return"
         sorted_list = self[:]
         sorted_list.sort()
         print(sorted_list)
