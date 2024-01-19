@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module for a class 'MyList' that inherits from 
+Module for a class 'MyList' that inherits from
 'list'
 """
 
