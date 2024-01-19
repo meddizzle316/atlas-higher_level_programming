@@ -19,6 +19,4 @@ class MyList(list):
     
     def print_sorted(self):
         """ prints a sorted list, no return """
-        sorted_list = self[:]
-        sorted_list.sort()
-        print(sorted_list)
+        print(sorted(self))
