@@ -11,4 +11,4 @@ Lookup:
 
 def lookup(obj):
     """ function that returns a list dictionary """
-    return list(obj.__dict__)
+    return list(dir(obj))
