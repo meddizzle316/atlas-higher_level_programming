@@ -14,4 +14,5 @@ A module that runs doctests on 1-my_list
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 >>> print(my_list.__doc__)
+a custom class for a list
 """
