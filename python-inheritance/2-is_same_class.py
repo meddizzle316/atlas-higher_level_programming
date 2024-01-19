@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-"This is the module for is_same_class"
+"""
+Module for a class 'MyList' that inherits from 
+'list'
+"""
+
 
 
 def is_same_class(obj, a_class):
+    """checks if same class"""
     return (type(obj) == a_class)
