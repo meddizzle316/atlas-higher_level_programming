@@ -4,5 +4,10 @@ A module that runs doctests on 1-my_list
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 >>> print(bg.__dict__)
+{}
+>>> bg.integer_validator("name", "John")
+Traceback: (most recent callback)
+...
+TypeError: name must be an integer
 
 """
