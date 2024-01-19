@@ -1,8 +1,18 @@
 #!/usr/bin/python3
-"""a module for the square class"""
+"""
+Module learning inheritance
+has a lookup function
+
+Lookup:
+    arg: obj
+    return: new list
+"""
+
+
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 class Square(Rectangle):
+    """a module for square class, inherits from rectangle"""
     def __init__(self, size):
         super().integer_validator(size)
         self.__size = size
