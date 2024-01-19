@@ -2,25 +2,26 @@
 """
 Module learning inheritance
 has a square class
-
-Square class:
-    attributes:
-        __size: private variable 
-        of square
-
-    methods:
-        __init__-- initializes function
-        validates size 
-        area: returns area
-        __str__: customizes string 
-        representation
+as well as methods 
+for said class 
 """
 
 Rectangle = __import__('9-rectangle.py').Rectangle
 
 class Square(Rectangle):
-    """a module for square class, inherits from rectangle"""
+    """ 
+    Square class:
+        attributes:
+            __size: private variable 
+            of square
 
+        methods:
+            __init__-- initializes function
+            validates size 
+            area: returns area
+            __str__: customizes string 
+            representation
+    """
 
     def __init__(self, size):
         super().integer_validator(size)
