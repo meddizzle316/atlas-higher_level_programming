@@ -8,5 +8,5 @@ import json
 
 def load_from_json_file(filename):
     """returns Py Object from Json"""
-    with open(filename, 'w') as file:
+    with open(filename, 'r') as file:
         return json.load(file)
