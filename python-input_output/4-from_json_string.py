@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a module that returns an object 
+a module that returns an object
 from Json string
 """
 import json
