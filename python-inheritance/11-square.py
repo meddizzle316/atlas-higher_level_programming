@@ -3,6 +3,19 @@
 Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
+    """ 
+    Square class:
+        attributes:
+            __size: private variable 
+            of square
+
+        methods:
+            __init__-- initializes function
+            validates size 
+            area: returns area
+            __str__: customizes string 
+            representation
+    """
     def __init__(self, size):
         super().integer_validator(size)
         self.__size = size
