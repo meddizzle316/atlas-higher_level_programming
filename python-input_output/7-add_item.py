@@ -13,3 +13,4 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 arg = sys.argv[1:]
 for i in arg:
     save_to_json_file(i, "add_items.json")
+load_from_json_file("add_items.json")
