@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-base module for almost a circle
-"""
+"""base module for almost a circle"""
 
 
 class Base():
