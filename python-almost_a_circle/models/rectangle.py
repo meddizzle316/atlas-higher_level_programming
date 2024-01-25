@@ -13,7 +13,7 @@ class Rectangle(Base):
         height - height
         x - ?
         y - ?
-    Method: 
+    Method:
         __init__: initializes, super from Base
         to get assign Base.id
     """
