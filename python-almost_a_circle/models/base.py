@@ -14,7 +14,15 @@ class Base():
     """
     __nb_objects = 0
     def __init__(self, id=None):
-        """initializes Base object"""
+        """
+        initializes Base object
+        self.id is id if id is not None
+        if id is none
+        objects is incremented
+        and id becomes nb_objects
+        """
         if not id is None: 
             self.id = id
-        Base.__nb_objects += 1
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
