@@ -21,7 +21,7 @@ class Base():
         objects is incremented
         and id becomes nb_objects
         """
-        if not id is None: 
+        if not id is None:
             self.id = id
         else:
             Base.__nb_objects += 1
