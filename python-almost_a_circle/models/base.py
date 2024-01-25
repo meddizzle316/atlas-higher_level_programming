@@ -11,6 +11,7 @@ class Base():
         __init__: sets self.id if id is not None
     """
     __nb_objects = 0
+    
     def __init__(self, id=None):
 
         """
