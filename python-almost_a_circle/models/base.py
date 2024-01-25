@@ -14,6 +14,7 @@ class Base():
     """
     __nb_objects = 0
     def __init__(self, id=None):
+
         """
         initializes Base object
         self.id is id if id is not None
@@ -21,7 +22,6 @@ class Base():
         objects is incremented
         and id becomes nb_objects
         """
-
         if id is not None:
             self.id = id
         else:
