@@ -105,15 +105,17 @@ class Rectangle(Base):
     #     for attribute, value in self.__dict__.items():
     #         yield attribute
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """function that updates Rectangle with new variables"""
-        if args is None:
-            pass
-        try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
-        except IndexError:
-            pass
+        if not any(args):
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
