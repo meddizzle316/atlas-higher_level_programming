@@ -84,14 +84,18 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             print("")
         else:
-            for i in range(self.height):
-                for x in range(self.width):
-                    new_list += "#"
-                if not i == self.height - 1:
-                    new_list += '\n'
-        new_list = ''.join(["".join(sublist) for sublist in new_list])
-        print(new_list)
+            for i in range(self.height + self.y):
+                if i < self.y:
+                    print("n")
+                    continue
+                for x in range(self.width + self.x):
+                    if x < self.x:
+                        print(" ", end="")
+                        continue
+                    print("#", end="")
+                print()
 
     def __str__(self):
         """new string representation"""
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} " +
+                f"{self.__width}/{self.__height}")
