@@ -99,3 +99,25 @@ class Rectangle(Base):
         """new string representation"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} " +
                 f"{self.__width}/{self.__height}")
+    
+    # def __iter__(self):
+    #     """changes how Rectangle is iterated over"""
+    #     for attribute, value in self.__dict__.items():
+    #         yield attribute
+
+    def update(self, *args):
+        """function that updates Rectangle with new variables"""
+        if args is None:
+            pass
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
+            
+
+
+
