@@ -86,7 +86,7 @@ class Rectangle(Base):
         else:
             for i in range(self.height + self.y):
                 if i < self.y:
-                    print("n")
+                    print()
                     continue
                 for x in range(self.width + self.x):
                     if x < self.x:
