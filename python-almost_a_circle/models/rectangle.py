@@ -99,7 +99,7 @@ class Rectangle(Base):
         """new string representation"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} " +
                 f"{self.__width}/{self.__height}")
-    
+
     # def __iter__(self):
     #     """changes how Rectangle is iterated over"""
     #     for attribute, value in self.__dict__.items():
@@ -117,7 +117,3 @@ class Rectangle(Base):
             self.y = args[4]
         except IndexError:
             pass
-            
-
-
-
