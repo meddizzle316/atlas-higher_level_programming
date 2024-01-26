@@ -77,3 +77,17 @@ class Rectangle(Base):
     def area(self):
         """returns area of rectangle"""
         return self.width * self.height
+    
+    def display(self):
+        """prints rectangle with # to stdout"""
+        new_list = []
+        if self.width == 0 or self.height == 0:
+            print("")
+        else:
+            for i in range(self.height):
+                for x in range(self.width):
+                    new_list += "#"
+                if not i == self.height - 1:
+                    new_list += '\n'
+        new_list =''.join(["".join(sublist) for sublist in new_list])
+        print(new_list)
