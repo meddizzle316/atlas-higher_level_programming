@@ -91,3 +91,6 @@ class Rectangle(Base):
                     new_list += '\n'
         new_list = ''.join(["".join(sublist) for sublist in new_list])
         print(new_list)
+
+def __str__(self):
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
