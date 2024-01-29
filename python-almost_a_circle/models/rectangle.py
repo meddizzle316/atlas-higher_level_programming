@@ -124,4 +124,6 @@ class Rectangle(Base):
         """returns a dictionary representation of Rect"""
         self.__dict__['width'] = self.__dict__.pop('_Rectangle__width')
         self.__dict__['height'] = self.__dict__.pop('_Rectangle__height')
+        self.__dict__['x'] = self.__dict__.pop('_Rectangle__x')
+        self.__dict__['y'] = self.__dict__.pop('_Rectangle__y')
         return self.__dict__
