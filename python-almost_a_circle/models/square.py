@@ -34,3 +34,11 @@ class Square(Rectangle):
                 self.y = args[3]
             except IndexError:
                 pass
+
+    def to_dictionary(self):
+        """returns a dictionary representation of Square"""
+        self.__dict__['size'] = self.__dict__.pop('_Rectangle__width')
+        self.__dict__.pop('_Rectangle__height')
+        self.__dict__['x'] = self.__dict__.pop('_Rectangle__x')
+        self.__dict__['y'] = self.__dict__.pop('_Rectangle__y')
+        return self.__dict__
