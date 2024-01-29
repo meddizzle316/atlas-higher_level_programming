@@ -20,3 +20,17 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """function that updates Square"""
+        if not any(args):
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+        else:
+            try:
+                self.id = args[0]
+                self.width = self.height = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except IndexError:
+                pass
