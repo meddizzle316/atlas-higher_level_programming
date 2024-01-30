@@ -123,7 +123,7 @@ class Rectangle(Base):
     def to_dictionary(self):
         """returns a dictionary representation of Rect"""
         attributes = ["id", "width", "height", "x", "y"]
-        d = []
+        d = {}
         for a in attributes:
             d.update({a: getattr(self, a)})
         return d
