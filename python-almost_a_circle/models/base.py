@@ -57,6 +57,7 @@ class Base():
         """returns the list of the json string
         representation json_string
         """
+        list = []
         if not json_string:
-            return "[]"
+            return list
         return json.loads(json_string)
