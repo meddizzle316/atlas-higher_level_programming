@@ -70,5 +70,9 @@ class Base():
         """
         new_object = cls(1, 1)
         for key, value in dictionary.items():
-            setattr(new_object, key, value)
+            new_object.update(**dictionary) 
+            """
+            I think you have to put the **before, otherwise 
+            it doesn't work??
+            """
         return new_object
