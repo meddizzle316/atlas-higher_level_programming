@@ -43,7 +43,7 @@ class Base():
         converts lists of objects to dictionaries
         and saves as json string to file
         """
-        with open(f"{cls.__name__}.json", 'w') as file:
+        with open(f"{cls.__name__}.json", 'w+') as file:
             if not list_objs:
                 file.writelines("[]")
             else:
