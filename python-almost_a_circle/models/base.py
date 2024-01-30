@@ -45,7 +45,7 @@ class Base():
         """
         if not list_objs:
             list_objs = []
-        with open("Rectangle.json", 'w') as file:
+        with open(f"{cls.__name__}.json", 'w') as file:
             for i in range(len(list_objs)):
                 new_string = cls.to_json_string((list_objs[i].to_dictionary()))
                 file.writelines(new_string)
