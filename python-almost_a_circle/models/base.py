@@ -51,4 +51,3 @@ class Base():
                 for i in range(len(list_objs)):
                     list.append((list_objs[i].to_dictionary()))
                 file.writelines(cls.to_json_string(list))
-                
