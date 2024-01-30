@@ -46,7 +46,7 @@ class Base():
         list = []
         with open(f"{cls.__name__}.json", 'w+') as file:
             if not list_objs:
-                file.writelines(list)
+                file.writelines("[]")
             else:
                 for i in range(len(list_objs)):
                     list.append((list_objs[i].to_dictionary()))
