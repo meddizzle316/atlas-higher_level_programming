@@ -48,5 +48,5 @@ class Base():
                 file.writelines("[]")
             else:
                 for i in range(len(list_objs)):
-                    new_string = cls.to_json_string((list_objs[i].to_dictionary()))
+                    new_string = cls.to_json_string((list_objs[i].__dict__))
                     file.writelines(new_string)
