@@ -68,7 +68,7 @@ class Base():
         returns an instance will all attributes 
         already set
         """
-        new_object = cls(1, 1)
+        new_object = cls(1, 0)
         for key, value in dictionary.items():
             new_object.update(**dictionary) 
             """
