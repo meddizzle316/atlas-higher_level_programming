@@ -43,9 +43,10 @@ class Base():
         converts lists of objects to dictionaries
         and saves as json string to file
         """
-        if not list_objs:
-            list_objs = []
         with open(f"{cls.__name__}.json", 'w') as file:
-            for i in range(len(list_objs)):
-                new_string = cls.to_json_string((list_objs[i].to_dictionary()))
-                file.writelines(new_string)
+            if not list_objs:
+                file.writelines("[]")
+            else:
+                for i in range(len(list_objs)):
+                    new_string = cls.to_json_string((list_objs[i].to_dictionary()))
+                    file.writelines(new_string)
