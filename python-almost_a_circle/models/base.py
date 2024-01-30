@@ -65,14 +65,14 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """
-        returns an instance will all attributes 
+        returns an instance will all attributes
         already set
         """
         new_object = cls(1, 1)
         for key, value in dictionary.items():
-            new_object.update(**dictionary) 
+            new_object.update(**dictionary)
             """
-            I think you have to put the **before, otherwise 
+            I think you have to put the **before, otherwise
             it doesn't work??
             """
         return new_object
