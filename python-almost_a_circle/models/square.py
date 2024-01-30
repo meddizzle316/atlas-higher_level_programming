@@ -46,6 +46,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """returns a dictionary representation of Rect"""
         self.__dict__['size'] = self.__dict__.pop('_Rectangle__width')
+        self.__dict__.pop('_Rectangle__height')
         attributes = ["id", "size", "x", "y"]
         d = {}
         for a in attributes:
