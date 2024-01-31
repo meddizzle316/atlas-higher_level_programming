@@ -98,7 +98,7 @@ class Rectangle(Base):
     def __str__(self):
         """new string representation"""
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} " +
-                f"{self.__width}/{self.__height}")
+                f"- {self.__width}/{self.__height}")
 
     # def __iter__(self):
     #     """changes how Rectangle is iterated over"""
