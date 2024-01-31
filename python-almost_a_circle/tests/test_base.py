@@ -97,6 +97,6 @@ class RectangleTest(unittest.TestCase):
             r1.display()
             self.assertEqual(fake_out.getvalue(), "\n\n  ##\n  ##\n")
     def test_Rectangle_to_dictionary(self):
-        r1 = Rectangle(2, 2, 2, 2)
+        r1 = Rectangle(2, 2, 2, 2, 1)
         r1_dict = r1.to_dictionary()
-        self.assertTrue(isinstance(r1_dict, dict))
+        self.assertEqual(r1_dict, {'id': 1, 'width': 2, 'height': 2, 'x': 2, 'y': 2} )
