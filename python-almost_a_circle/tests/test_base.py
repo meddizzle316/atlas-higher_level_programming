@@ -96,3 +96,7 @@ class RectangleTest(unittest.TestCase):
         with patch('sys.stdout', new = StringIO()) as fake_out:
             r1.display()
             self.assertEqual(fake_out.getvalue(), "\n\n  ##\n  ##\n")
+    def test_Rectangle_to_dictionary(self):
+        r1 = Rectangle(2, 2, 2, 2)
+        r1_dict = r1.to_dictionary()
+        self.assertTrue(isinstance(r1_dict, dict))
