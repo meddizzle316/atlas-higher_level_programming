@@ -91,3 +91,8 @@ class RectangleTest(unittest.TestCase):
         with patch('sys.stdout', new = StringIO()) as fake_out:
             r1.display()
             self.assertEqual(fake_out.getvalue(), "#\n")
+    def test_Rectangle_display(self):
+        r1 = Rectangle(2, 2, 2, 2)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.display()
+            self.assertEqual(fake_out.getvalue(), "\n\n  ##\n  ##\n")
