@@ -3,7 +3,9 @@
 has tests for base class
 """
 import unittest
-import os
+import sys
+from io import StringIO
+from unittest.mock import patch
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
@@ -84,3 +86,9 @@ class RectangleTest(unittest.TestCase):
     def test_Rectangle_str(self):
         r1 = Rectangle(5, 5, 1, 0, 1)
         self.assertEqual(str(r1), '[Rectangle] (1) 1/0 - 5/5')
+    def test_Rectangle_display_without_x_y(self):
+        r1 = Rectangle(1, 1)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.display()
+            self.assertEqual(fake_out.getvalue(), "#\n")
+    
