@@ -107,3 +107,59 @@ class RectangleTest(unittest.TestCase):
             exp_output = "[Rectangle] (89) 10/10 - 10/10\n"
             print(r1)
             self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_with_1_arg(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(89, 1)
+            exp_output = "[Rectangle] (89) 10/10 - 1/10\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_with_2_args(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(89, 1, 2)
+            exp_output = "[Rectangle] (89) 10/10 - 1/2\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_with_3_args(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(89, 1, 2, 3)
+            exp_output = "[Rectangle] (89) 3/10 - 1/2\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_with_4_args(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(89, 1, 2, 3, 4)
+            exp_output = "[Rectangle] (89) 3/4 - 1/2\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_kwargs_height(self):
+        r1 = Rectangle(10, 10, 10, 10, 1)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(height=1)
+            exp_output = "[Rectangle] (1) 10/10 - 10/1\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_kwargs_height_width(self):
+        r1 = Rectangle(10, 10, 10, 10, 1)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(height=1, width=1)
+            exp_output = "[Rectangle] (1) 10/10 - 1/1\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_kwargs_height_width_x(self):
+        r1 = Rectangle(10, 10, 10, 10, 1)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(height=1, width=1, x=1)
+            exp_output = "[Rectangle] (1) 1/10 - 1/1\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_update_kwargs_height_width_x_y(self):
+        r1 = Rectangle(10, 10, 10, 10, 1)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(height=1, width=1, x=1, y=1)
+            exp_output = "[Rectangle] (1) 1/1 - 1/1\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
