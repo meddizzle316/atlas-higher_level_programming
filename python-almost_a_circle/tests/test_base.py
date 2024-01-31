@@ -91,4 +91,3 @@ class RectangleTest(unittest.TestCase):
         with patch('sys.stdout', new = StringIO()) as fake_out:
             r1.display()
             self.assertEqual(fake_out.getvalue(), "#\n")
-    
