@@ -100,3 +100,10 @@ class RectangleTest(unittest.TestCase):
         r1 = Rectangle(2, 2, 2, 2, 1)
         r1_dict = r1.to_dictionary()
         self.assertEqual(r1_dict, {'id': 1, 'width': 2, 'height': 2, 'x': 2, 'y': 2} )
+    def test_Rectangle_update(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        with patch('sys.stdout', new = StringIO()) as fake_out:
+            r1.update(89)
+            exp_output = "[Rectangle] (89) 10/10 - 10/10\n"
+            print(r1)
+            self.assertEqual(fake_out.getvalue(), exp_output)
