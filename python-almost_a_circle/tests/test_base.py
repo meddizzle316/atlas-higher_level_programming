@@ -45,3 +45,34 @@ class RectangleTest(unittest.TestCase):
     def test_all_attributes_Rectangle_exists(self):
         r1 = Rectangle(1, 2, 3, 4)
         self.assertIsNotNone(r1)
+    def test_Rectangle_width_validation(self):
+        with self.assertRaises(TypeError):
+            r1 = Rectangle("1", 2)
+    def test_Rectangle_height_validation(self):
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, "2")
+    def test_Rectangle_x_validation(self):
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, "3")
+    def test_Rectangle_y_validation(self):
+        with self.assertRaises(TypeError):
+            r1 = Rectangle(1, 2, 3, "4")
+    def test_Rectangle_extra_parameter(self):
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r1.id, 5)
+    def test_Rectangle_width_negative(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(-1, 2)
+    def test_Rectangle_height_negative(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, -2)
+    def test_Rectangle_width_above_0(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(0, 2)
+    def test_Rectangle_height_above_0(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 0)
+    def test_Rectangle_x_negative(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 2, -3)
+
