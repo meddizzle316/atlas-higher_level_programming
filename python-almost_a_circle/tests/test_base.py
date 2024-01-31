@@ -7,6 +7,7 @@ from models.base import Base
 
 class Test(unittest.TestCase):
     """Class for unittests on Base class"""
-    def test_expected_id(self):
+    def test_base_auto_assign_id(self):
         base = Base()
         self.assertEqual(base.id, 1)
+    
