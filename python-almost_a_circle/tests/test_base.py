@@ -34,3 +34,14 @@ class BaseTest(unittest.TestCase):
     def test_from_json_string_empty(self):
         self.assertEqual(Base.from_json_string([]), [])
     
+class RectangleTest(unittest.TestCase):
+    """Class for unittests on Rectangle Class"""
+    def test_Rectangle_only_width_and_height_exists(self):
+        r1 = Rectangle(1, 2)
+        self.assertEqual(r1.width, 1)
+    def test_Rectangle_without_y(self):
+        r1 = Rectangle(1, 2, 3)
+        self.assertIsNotNone(r1)
+    def test_all_attributes_Rectangle_exists(self):
+        r1 = Rectangle(1, 2, 3, 4)
+        self.assertIsNotNone(r1)
