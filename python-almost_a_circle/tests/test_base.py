@@ -22,5 +22,10 @@ class BaseTest(unittest.TestCase):
         self.assertEqual(base.id, 89)
     def test_json_string_none_exists(self):
         base = Base()
-        Base.to_json_string(None)
+        result = Base.to_json_string(None)
+        self.assertEqual(result, "[]")
+    def test_json_string_empty_list(self):
+        base = Base()
+        Base.to_json_string([])
+
 
