@@ -81,3 +81,6 @@ class RectangleTest(unittest.TestCase):
     def test_Rectangle_area(self):
         r1 = Rectangle(3, 4)
         self.assertEqual(r1.area(), 12)
+    def test_Rectangle_str(self):
+        r1 = Rectangle(5, 5, 1, 0, 1)
+        self.assertEqual(str(r1), '[Rectangle] (1) 1/0 - 5/5')
