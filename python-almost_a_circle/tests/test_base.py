@@ -75,4 +75,9 @@ class RectangleTest(unittest.TestCase):
     def test_Rectangle_x_negative(self):
         with self.assertRaises(ValueError):
             r1 = Rectangle(1, 2, -3)
-
+    def test_Rectangle_y_negative(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 2, 3, -4)
+    def test_Rectangle_area(self):
+        r1 = Rectangle(3, 4)
+        self.assertEqual(r1.area(), 12)
