@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """base module for almost a circle"""
-import json
+import json, os
 
 
 class Base():
@@ -82,6 +82,8 @@ class Base():
     def load_from_file(cls):
         """returns a list of instances"""
         new_list = []
+        if not os.path.isfile(f"{cls.__name__}.json"):
+            return new_list
         with open(f"{cls.__name__}.json", 'r') as file:
             new_list = cls.from_json_string(file.read())
             list_of_new_objects = []
