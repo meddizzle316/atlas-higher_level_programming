@@ -163,3 +163,5 @@ class RectangleTest(unittest.TestCase):
             exp_output = "[Rectangle] (1) 1/1 - 1/1\n"
             print(r1)
             self.assertEqual(fake_out.getvalue(), exp_output)
+    def test_Rectangle_create(self):
+        Rectangle.create(**{ 'id':89})
