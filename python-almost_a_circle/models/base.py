@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base module for almost a circle"""
-import json, os
+import json
+import os
 
 
 class Base():
