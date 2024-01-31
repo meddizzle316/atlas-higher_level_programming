@@ -44,17 +44,18 @@ class Base():
         and saves as json string to file
         """
         list = []
-        with open(f"{cls.__name__}.json", 'w+') as file:
+        with open(f"{cls.__name__}.json", 'w') as file:
             if not list_objs:
                 file.writelines("[]")
             else:
                 for i in range(len(list_objs)):
                     list.append((list_objs[i].to_dictionary()))
-                file.writelines(cls.to_json_string(list))
+            file.writelines(cls.to_json_string(list))
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the json string
+        """
+        returns the list of the json string
         representation json_string
         """
         list = []
@@ -76,3 +77,15 @@ class Base():
             it doesn't work??
             """
         return new_object
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        new_list = []
+        with open(f"{cls.__name__}.json", 'r') as file:
+            new_list = cls.from_json_string(file.read())
+            list_of_new_objects = []
+            for i in range(len(new_list)):
+                new_object = cls.create(**new_list[i])
+                list_of_new_objects.append(new_object)
+        return list_of_new_objects
