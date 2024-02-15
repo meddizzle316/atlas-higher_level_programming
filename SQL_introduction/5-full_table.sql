@@ -4,4 +4,4 @@
 
 mysql -u root -p hbtn_0c_0;
 USE hbtn_0c_0;
-SELECT * FROM first_table;
+DESC first_table;
