@@ -4,5 +4,5 @@
 
 -- IF DB_ID('hbtn_0c_0_ID') IS NOT NULL
 -- BEGIN
-CREATE DATABASE hbtn_0c_0;
+CREATE DATABASE hbtn_0c_0 IF NOT EXISTS hbtn_0c_0;
 -- END
