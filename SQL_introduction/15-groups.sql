@@ -2,4 +2,4 @@
 -- of the database hbtn_0c_0 in your MySQL server.
 
 
-SELECT score, COUNT(*) FROM first_table;
+SELECT score, COUNT(*) FROM second_table;
