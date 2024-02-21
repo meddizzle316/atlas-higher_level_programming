@@ -2,4 +2,4 @@
 
 SELECT cities.*, states.name AS "name"
 FROM cities
-JOIN states ON cities.name = cites.id;
+JOIN states ON cities.name = cities.id;
