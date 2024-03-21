@@ -5,7 +5,7 @@ services:
     - infinity
     image: ubuntu
     build: 
-      context: ./.devcontainer
+      context: .
       dockerfile: Dockerfile
     init: true
     volumes:
