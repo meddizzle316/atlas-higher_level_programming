@@ -10,7 +10,7 @@ function add (a, b) {
 }
 
 if (isNaN(firstNum) || isNaN(secondNum)) {
-  console.log('Nan');
+  console.log('NaN');
 } else {
   const result = add(firstNum, secondNum);
   console.log(result);
