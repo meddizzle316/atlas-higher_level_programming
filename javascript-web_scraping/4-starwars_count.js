@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const request = require('request');
-const baseUrl = 'https://swapi-api.hbtn.io/api/films/';
+const baseUrl = process.argv[2];
 request(baseUrl, {
   encoding: 'utf8'
 }, function (err, response, body) {
