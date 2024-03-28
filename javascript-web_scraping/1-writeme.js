@@ -2,7 +2,7 @@
 
 fd = require('fs');
 const filePath = process.argv[2];
-const string = process.argv[3] + '\n';
+const string = process.argv[3];
 fd.writeFile(filePath, string, {
   encoding: 'utf8'
 }, function (err, file) {
