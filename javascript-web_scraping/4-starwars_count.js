@@ -1,0 +1,17 @@
+#!/usr/bin/node
+
+const request = require('request');
+const baseUrl = 'https://swapi-api.hbtn.io/api/films/';
+request(baseUrl, {
+  encoding: 'utf8'
+}, function (err, response, body) {
+  if (err) console.log(err);
+  const http = JSON.parse(body);
+  let count = 0;
+  for (let i = 0; i < http.results.length; i++) {
+    if (http.results[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+      count++;
+    }
+  }
+  console.log(count);
+});
