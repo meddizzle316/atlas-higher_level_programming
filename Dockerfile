@@ -10,3 +10,4 @@ RUN apt-get install -y python3-lxml
 RUN apt-get install -y nodejs
 RUN apt-get install -y node-fetch
 RUN npm install semistandard --global
+RUN npm install request
