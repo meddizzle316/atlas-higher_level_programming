@@ -23,7 +23,7 @@ request('https://jsonplaceholder.typicode.com/users', function (err, response, b
       if (tempDict[key] !== 0) {
         endDict[key] = tempDict[key];
       }
-    })
+    });
     console.log(endDict);
   });
 });
