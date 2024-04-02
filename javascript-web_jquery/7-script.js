@@ -1,19 +1,18 @@
 #!/usr/bin/node
 
-const character_url = 'https://swapi-api.hbtn.io/api/people/5/?format=json';
-console.log(character_url);
+const characterUrl = 'https://swapi-api.hbtn.io/api/people/5/?format=json';
+console.log(characterUrl);
 let object = {};
 $.ajax({
-  url: character_url,
+  url: characterUrl,
   dataType: 'json',
-  success: function(data) {
+  success: function (data) {
     // console.log(data)
     object = data;
     console.log(object);
-    for (let key in object) {
+    for (const key in object) {
       // console.log(object[key]);
       $('DIV#character').append('<div>' + object[key] + '</div>');
     }
   }
-})
-
+});
